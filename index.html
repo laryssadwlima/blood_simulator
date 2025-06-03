@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blood Donation Simulator - Salve Vidas</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="icon/icon.ico">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <img src="icon/logo.png" alt="Logo Doe Sangue" />
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html" class="active">Início</a>
+        <a href="quem-pode-doar.html">Quem Pode Doar</a>
+        <a href="cuidados.html">Cuidados</a>
+        <a href="hemocentros.html">Hemocentros</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>🩸 Doe Vida. Seja um Herói.</h1>
+          <p>Este simulador foi criado para conscientizar a população sobre a importância da doação de sangue e verificar se uma pessoa está temporariamente ou permanentemente inapta para doar.</p>
+          <p>Milhares de pessoas precisam de sangue todos os dias. Sua doação pode salvar até <strong>quatro vidas</strong>!</p>
+        </div>
+        <div class="hero-image">
+          <img src="icon/doando.png" alt="Doação de Sangue" />
+        </div>
+      </div>
+    </section>
+
+    <section class="simulator-section">
+      <div class="container">
+        <h2>Simulador de Doação de Sangue</h2>
+        <p>Veja se você está apto para doar sangue!</p>
+
+        <form id="formulario">
+          <label for="idade">Idade:
+            <input type="number" id="idade" min="0" required />
+          </label>
+
+          <label for="peso">Peso (kg):
+            <input type="number" id="peso" min="0" step="0.1" required />
+          </label>
+
+          <label for="genero">Gênero:
+            <select id="genero" required>
+              <option value="">Selecione</option>
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+            </select>
+          </label>
+
+          <label for="doente">Você está doente ou teve febre/gripe nos últimos 7 dias?
+            <select id="doente" required>
+              <option value="">Selecione</option>
+              <option value="nao">Não</option>
+              <option value="sim">Sim</option>
+            </select>
+          </label>
+
+          <label for="gestante">Você está grávida ou amamentando?
+            <select id="gestante" required>
+              <option value="">Selecione</option>
+              <option value="nao">Não</option>
+              <option value="sim">Sim</option>
+            </select>
+          </label>
+
+          <label for="tatuagem">Fez tatuagem, piercing ou acupuntura nos últimos 12 meses?
+            <select id="tatuagem" required>
+              <option value="">Selecione</option>
+              <option value="nao">Não</option>
+              <option value="sim">Sim</option>
+            </select>
+          </label>
+
+          <label for="cirurgia">Teve cirurgia nos últimos 6 meses?
+            <select id="cirurgia" required>
+              <option value="">Selecione</option>
+              <option value="nao">Não</option>
+              <option value="sim">Sim</option>
+            </select>
+          </label>
+
+          <label for="vacina">Tomou alguma vacina nos últimos 30 dias?
+            <select id="vacina" required>
+              <option value="">Selecione</option>
+              <option value="nao">Não</option>
+              <option value="sim">Sim</option>
+            </select>
+          </label>
+
+          <label for="alcool">Ingeriu bebida alcoólica nas últimas 12 horas?
+            <select id="alcool" required>
+              <option value="">Selecione</option>
+              <option value="nao">Não</option>
+              <option value="sim">Sim</option>
+            </select>
+          </label>
+
+          <label for="sono">Dormiu pelo menos 6 horas nas últimas 24 horas?
+            <select id="sono" required>
+              <option value="">Selecione</option>
+              <option value="nao">Não</option>
+              <option value="sim">Sim</option>
+            </select>
+          </label>
+
+          <label for="nuncaDoou">Nunca doou sangue?
+            <select id="nuncaDoou" required>
+              <option value="">Selecione</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </label>
+
+          <label id="labelMeses">Quantos dias desde a última doação?
+            <input type="number" id="meses" min="0" />
+          </label>
+
+          <button type="submit">Verificar</button>
+        </form>
+
+        <div id="resultado"></div>
+      </div>
+
+      <div class="container donation-locations">
+        <h2>Encontre um Local para Doar</h2>
+        <p>Descubra os hemocentros e postos de coleta mais próximos de você.</p>
+        
+        <div class="location-search">
+          <div class="location-content">
+            <img src="icon/mapa.png" alt="Mapa de Doação" class="location-image" />
+            <div class="location-info">
+              <p class="location-text">Encontre o local de doação mais próximo da sua casa e ajude a salvar vidas!</p>
+              <a href="hemocentros.html" class="btn-search">
+                <i class="fas fa-search"></i>
+                <span>Buscar Locais</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 Blood Donation Simulator - Todos os direitos reservados</p>
+      <div class="social-links">
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

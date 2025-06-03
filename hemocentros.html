@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Encontre Hemocentros - Blood Donation Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="icon/icon.ico">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <img src="icon/logo.png" alt="Logo Doe Sangue" />
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html">Início</a>
+        <a href="quem-pode-doar.html">Quem Pode Doar</a>
+        <a href="cuidados.html">Cuidados</a>
+        <a href="hemocentros.html" class="active">Hemocentros</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="search-section">
+      <div class="container">
+        <h1>Encontre um Hemocentro</h1>
+        <p>Digite seu CEP para encontrar os locais de doação mais próximos de você.</p>
+
+        <div class="search-box">
+          <form id="searchForm">
+            <div class="input-group">
+              <input type="text" id="cep" placeholder="Digite seu CEP" maxlength="9" required />
+              <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                Buscar
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div id="map" class="map-container">
+
+        </div>
+
+        <div id="results" class="results-container">
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 Blood Donation Simulator - Todos os direitos reservados</p>
+      <div class="social-links">
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&libraries=places,geometry"></script>
+  <script src="hemocentros.js"></script>
+</body>
+</html> 
